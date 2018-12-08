@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="javascript/vue.js"></script>
+    <script src="javascript/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="javascript/bootstrap/css/bootstrap.css">
+    <script src="javascript/bootstrap/js/bootstrap.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid" style="margin: 0px; padding: 0px;">
+        <div class="row" id="title" style="text-align: center; box-shadow: rgba(0, 0, 0, .1)0 1px 5px; background-color: rgba(34, 177, 76)">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <h3>班级投票</h3>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2">
+                    <a href="index.html" style="color: black">
+                            <h3>返回</h3>
+                        </a>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                发布班级投票
+            </button>
+        </div>
+    </div>
+
+    <!-- 输入表单 -->
+    <div class="container">
+        <div class="row">
+            <div class="collapse" id="collapseExample">
+                <div class="well">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">标题</span>
+                        <input type="text" class="form-control" placeholder="标题" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon2">内容</span>
+                        <textarea name="" class="form-control" id="" cols="30" rows="10" placeholder="内容"
+                            aria-describedby="basic-addon1"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">选项</span>
+                        <input type="text" class="form-control" placeholder="选项A" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="选项B" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="选项C" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="选项D" aria-describedby="basic-addon1">
+                    </div><!-- /input-group -->
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon4">是否是单选</span>
+                        <span class=" form-control">
+                            <input type="radio" name="isone">是
+                            <input type="radio" name="isone">否
+                        </span>
+                    </div>
+                    <button type="button" class="btn btn-default">发布</button>
+                </div>
+            </div>
+        </div>
+        <!-- 展示班级通知 -->
+        <div class="row">
+
+            <div class="jumbotron">
+
+
+                <h2>周末聚餐投票</h2>
+
+                <form action="">
+
+                    <div class="input-group">
+                        <span class="input-group-addon">A</span>
+                        <input type="radio" name="input"  placeholder="标题" aria-describedby="basic-addon1" style="margin-left: 20px;">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">B</span>
+                        <input type="radio" name="input"  placeholder="标题" aria-describedby="basic-addon1" style="margin-left: 20px;">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">C</span>
+                        <input type="radio" name="input" placeholder="标题" aria-describedby="basic-addon1" style="margin-left: 20px;">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">D</span>
+                        <input type="radio" name="input" placeholder="标题" aria-describedby="basic-addon1" style="margin-left: 20px;">
+                    </div>
+                    <button type="button" class="btn btn-default">提交</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

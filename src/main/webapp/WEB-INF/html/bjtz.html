@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Docurrment</title>
+    <script src="javascript/vue.js"></script>
+    <script src="javascript/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="javascript/bootstrap/css/bootstrap.css">
+    <script src="javascript/bootstrap/js/bootstrap.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid" style="margin: 0px; padding: 0px;">
+        <div class="row" id="title" style="text-align: center; box-shadow: rgba(0, 0, 0, .1)0 1px 5px; background-color: rgba(34, 177, 76)">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <h3>班级通知</h3>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2">
+                    <a href="index.html" style="color: black">
+                            <h3>返回</h3>
+                        </a>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                添加班级通知
+            </button>
+        </div>
+    </div>
+
+    <!-- 输入表单 -->
+    <div class="container">
+        <div class="row">
+            <div class="collapse" id="collapseExample">
+                <div class="well">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">标题</span>
+                        <input id="titles" type="text" class="form-control" placeholder="标题" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon2">内容</span>
+                        <textarea name="" class="form-control" id="content" cols="30" rows="10" placeholder="内容"
+                            aria-describedby="basic-addon1"></textarea>
+                    </div>
+                    <button onclick="check()" type="button" class="btn btn-default">发布</button>
+                    <span style="color: red" id="error"></span>
+
+                </div>
+            </div>
+        </div>
+        <!-- 展示班级通知 -->
+        <div class="row">
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Success!</strong> 明天交英语作业
+            </div>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Warning!</strong> 明天交英语作业
+            </div>
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Warning!</strong> 明天交英语作业
+            </div>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Warning!</strong> 明天交英语作业
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+            //         var inputUserName = $('#inputUserName').val()
+            // var inputPassword = $('#inputPassword').val()
+            // console.log(inputUserName)
+            // console.log(inputPassword)
+            // var reg1 = /^[0-9]{6}$/;
+            // var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,16}$/;
+            // if (!reg1.test(inputUserName)) {
+
+            //     $('#inputUserName1').text('请输入6位学号')
+            // } else {
+
+            //     $('#inputUserName1').text('')
+            //     if (!reg2.test(inputPassword)) {
+            //         $('#inputPassword1').text('请输入数字，大小写等')
+            //     } else {
+            //         $('#inputPassword1').text('')
+            //         window.location.href='index.html'
+            //         return true;
+            //     }
+            // }
+
+function check() {
+    var titles = $('#titles').val()
+    var content = $('#content').val()
+    console.log(titles)
+    console.log(content)
+
+    var reg = /^\s+$/;  //不全为空格，回车或者空
+    if (!reg.test(titles)) {
+        $('#error').text('输入的标题和内容不为空！')
+    } else {
+        console.log('成功！')
+        $('#error').text('')
+
+    }
+}
+    
+    
+    
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Docurrment</title>
+    <script src="javascript/vue.js"></script>
+    <script src="javascript/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="javascript/bootstrap/css/bootstrap.css">
+    <script src="javascript/bootstrap/js/bootstrap.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid" style="margin: 0px; padding: 0px;">
+        <div class="row" id="title" style="text-align: center; box-shadow: rgba(0, 0, 0, .1)0 1px 5px; background-color: rgba(63, 72, 204)">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <h3>心灵鸡汤</h3>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2">
+                    <a href="index.html" style="color: black">
+                            <h3>返回</h3>
+                        </a>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                发布
+            </button>
+        </div>
+    </div>
+
+    <!-- 输入表单 -->
+    <div class="container">
+        <div class="row">
+            <div class="collapse" id="collapseExample">
+                <div class="well">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">标题</span>
+                        <input type="text" class="form-control" placeholder="标题" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon2">内容</span>
+                        <textarea name="" class="form-control" id="" cols="30" rows="5" placeholder="内容"
+                            aria-describedby="basic-addon1"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-default">发布</button>
+                </div>
+            </div>
+        </div>
+        <!-- 展示班级通知 -->
+        <div class="row" style="height: 500px; overflow: auto ;">
+
+            <div class="jumbotron">
+                <h2>长久!</h2>
+                <p>记得为自己而活。虽然我们不是单独存在，也总要顾全大局。孩子也好，伴侣也好，工作也好，都不会是陪你最长久的一个，唯有自己才是自己永远的伴侣，所以记得为自己而活。</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">下一个</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="text-align: center">
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+</body>
+
+</html>

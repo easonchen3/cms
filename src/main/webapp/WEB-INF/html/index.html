@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="javascript/vue.js"></script>
+    <script src="javascript/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="javascript/bootstrap/css/bootstrap.css">
+    <script src="javascript/bootstrap/js/bootstrap.js"></script>
+    <style>
+        .center {
+            position: absolute;
+            background-color: aqua;
+            top: 25%;
+            left: 25%;
+            width: 400px;
+            height: 400px;
+        }
+
+        #login {
+            margin-top: 20px;
+            /* background-color: aqua; */
+            /* border: solid 1px _black; */
+            background-color: #FFF;
+            border: 1px solid #ddd;
+            margin-top: 50px;
+            border-radius: 5px;
+            height: 300px;
+            ;
+        }
+
+        #title {
+            text-align: center;
+            /* background-color: cornflowerblue; */
+            /* border-bottom: solid 2px #DDDDD9; */
+            box-shadow: rgba(0, 0, 0, .1)0 1px 5px;
+        }
+
+        #header {
+            text-align: center;
+        }
+
+        #button {
+
+            margin-top: 70px;
+            height: 1px;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" style="margin: 0px; padding: 0px;">
+        <div class="row" id="title">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <a href="index.html">
+                    <h3>班级管理系统</h3>
+                </a>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-1">
+                    <img src="image/tx.png" alt="..." style="height: 47px; margin-top: 5px; border-radius: 5px; margin-left: 60px;">
+
+            </div>
+
+            <div class="col-lg-2">
+                <ul class="nav" style="padding: 10px;padding: 0px; width: 158px; ">
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false" style=" padding-top: 20px;padding-bottom: 16px; ">
+                            个人中心 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a href="login.html">退出登录</a></li>
+                            <li><a href="index.html">回到首页</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-lg-1">
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row" style="padding-top: 50px;">
+
+            <div class="col-lg-1">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"
+                            style="text-align: center">主页</a></li>
+                    <li role="presentation"><a href="#activite" aria-controls="activite" role="tab" data-toggle="tab"
+                            style="text-align: center">学生管理</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"
+                            style="text-align: center">活动管理</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"
+                            style="text-align: center">财务管理</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"
+                            style="text-align: center">通知管理</a></li>
+                    <li role="presentation"><a href="#let" aria-controls="let" role="tab" data-toggle="tab" style="text-align: center">学习交流</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-11">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="jumbotron">
+                            <h1>班级管理系统</h1>
+                            <p>实现班级信息的通知</p>
+                            <p>实现班级活动的管理</p>
+                            <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="activite">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 用户注册 -->
+                                <a href="yhzc.html" class="thumbnail" target="_self">
+                                    <img src="image/yhzc.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 用户信息管理 -->
+                                <a href="yhxxgl.html" class="thumbnail" target="_self">
+                                    <img src="image/yhxxgl.png" alt="...">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 活动记录 -->
+                                <a href="hdjl.html" class="thumbnail" target="_self">
+                                    <img src="image/hdjl.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 比赛报名 -->
+                                <a href="bsbm.html" class="thumbnail" target="_self">
+                                    <img src="image/bsbm.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 获奖展示 -->
+                                <a href="hjzs.html" class="thumbnail" target="_self">
+                                    <img src="image/hjzs.png" alt="...">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 班级支出流水 -->
+                                <a href="bjzcls.html" class="thumbnail" target="_self">
+                                    <img src="image/bjzcls.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 班级支出统计 -->
+                                <a href="bjzctj.html" class="thumbnail" target="_self">
+                                    <img src="image/bjzctj.png" alt="...">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 班级通知 -->
+                                <a href="bjtz.html" class="thumbnail" target="_self" id="bjtz">
+                                    <img src="image/bjtz.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 班级投票 -->
+                                <a href="bjtp.html" class="thumbnail" target="_self" id="zjtp">
+                                    <img src="image/bjtp.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 课表查询 -->
+                                <a href="kbcx.html" class="thumbnail" target="_self">
+                                    <img src="image/kbcx.png" alt="...">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="let">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 讨论区 -->
+                                <a href="tlq.html" class="thumbnail" target="_self">
+                                    <img src="image/tlq.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 文件共享 -->
+                                <a href="wjgx.html" class="thumbnail" target="_self">
+                                    <img src="image/wjgx.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 心灵鸡汤 -->
+                                <a href="xljt.html" class="thumbnail" target="_self">
+                                    <img src="image/xljt.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <!-- 链接分享 -->
+                                <a href="ljfx.html" class="thumbnail" target="_self">
+                                    <img src="image/ljfx.png" alt="...">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

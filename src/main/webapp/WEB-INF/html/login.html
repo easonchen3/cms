@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="javascript/vue.js"></script>
+    <script src="javascript/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="javascript/bootstrap/css/bootstrap.css">
+    <style>
+
+
+        .center {
+            position: absolute;
+            background-color: aqua;
+            top: 25%;
+            left: 25%;
+            width: 400px;
+            height: 400px;
+        }
+
+        #login{
+            margin-top: 20px;
+            /* background-color: aqua; */
+            /* border: solid 1px black; */
+            background-color: #FFF;
+            border: 1px solid #ddd;
+            margin-top: 50px;
+            border-radius: 5px;
+            height: 300px;;
+        }
+
+        #title {
+            text-align: center;
+            /* background-color: cornflowerblue; */
+            /* border-bottom: solid 2px #DDDDD9; */
+            box-shadow: rgba(0,0,0,.1)0 1px 5px;
+        }
+        #header{
+            text-align: center;
+        }
+        #button{
+
+            margin-top: 70px;
+            height: 1px;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" id="title">
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-2">
+                <h3>班级管理系统</h3>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4" id="login">
+                <form class="form-signin" action="/" method="POST">
+                    <h2 class="form-signin-heading" id="header">用户登录</h2>
+                    <label id="inputUserName1"></label>
+                    <input type="text" id="inputUserName" class="form-control" placeholder="输入6位学号" required style="margin: 5px;">
+                    <laber>
+                        <label id="inputPassword1"></label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="密码" required style="margin: 5px;">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me">保持登陆
+                            </label>
+                        </div>
+                        <button  id="btn"
+                            class="btn btn-lg btn-primary btn-block" onclick="check()" type="button" style="margin: 5px;">登录</button>
+                </form>
+
+            </div>
+            <div class="col-lg-4"></div>
+
+        </div>
+
+        <div class="row" id="button">
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+        function check() {
+            var inputUserName = $('#inputUserName').val()
+            var inputPassword = $('#inputPassword').val()
+            console.log(inputUserName)
+            console.log(inputPassword)
+            var reg1 = /^[0-9]{6}$/;
+            var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,16}$/;
+            if (!reg1.test(inputUserName)) {
+
+                $('#inputUserName1').text('请输入6位学号')
+            } else {
+
+                $('#inputUserName1').text('')
+                if (!reg2.test(inputPassword)) {
+                    $('#inputPassword1').text('请输入数字，大小写等')
+                } else {
+                    $('#inputPassword1').text('')
+                    window.location.href='index.html'
+                    return true;
+                }
+            }
+
+        }
+
+        // function checkInputUserName() {
+        //     var reg = /^[0-9]{6}$/;
+        //     var inputUserName = $('#inputUserName').val()
+        //     console.log(inputUserName)
+        //     if (!reg.test(inputUserName)) {
+        //         var s = document.querySelector('#inputUserName');
+        //         s.setCustomValidity('请输入6为学号')
+        //         s.focus();
+        //         return false;
+        //     } else {
+        //         // var s = document.querySelector('#inputUserName');
+        //         // s.setCustomValidity('正确')
+        //         return true;
+        //     }
+        // }
+
+        // function checkInputPassword() {
+        //     var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,16}$/;
+        //     var inputPassword = $('#inputPassword').val()
+        //     console.log(inputPassword)
+        //     if (!reg.test(inputPassword)) {
+        //         var a = document.querySelector('#inputPassword');
+        //         a.setCustomValidity('请输入6为学号')
+        //     } else {
+        //         // var a = document.querySelector('#inputPassword');
+        //         // a.setCustomValidity('正确')
+        //     }
+        // }
+    </script>
+
+
+
+</body>
+
+</html>
